@@ -10,6 +10,9 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/all.css">
+        <link rel="stylesheet" href="./css/fontawesome.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -20,14 +23,29 @@
                 <div class="rightSide">
                     <div class="contentRight">
                         <h2>ورود</h2>
-                        <h1>ورود به حساب کاربری</h1>
-                        <p>جهت ورود به حساب کاربری رمز عبور خود را وارد کنید</p>
-                        <input class = "email" type="text" placeholder="r.semiyari@yahoo.com">
-                        <input class = "pass" type="text" placeholder="رمز‌عبور">
-                        <input class = "securCode" type="text" placeholder="کدامنیتی">
+                        <h1>ورود به ‌حساب ‌کاربری</h1>
+                        <p class="titleInput">جهت ورود به حساب کاربری رمز عبور خود را وارد نمایید</p>
+                        <div class="emailInput">
+                            <input class = "email" type="text" placeholder="r.semiyari@yahoo.com">
+                            <i class="fas fa-user fa-xs"></i>
+                        </div>
+                        <div class="passInput">
+                            <input class = "pass" type="text" placeholder="رمز‌عبور">
+                            <i class="fas fa-lock fa-xs"></i>
+                        </div>
+                        <div class="securInput">
+                            <div class="secur">
+                                <input class = "securCode" type="text" placeholder="کدامنیتی">
+                                <i class="fa fa-th fa-xs" aria-hidden="true"></i>
+                            </div>
+                            <div class="code">
+                                <img src="./imags/secur code chapch.jpg" alt="">
+                                <i class="fas fa-sync-alt fa-xs"></i>
+                            </div>  
+                        </div>
                         <button>ورود</button>
                         <div class="check">
-                            <input type="checkbox">
+                            <input class="checkBox" type="checkbox">
                             <p>مرا به خاطر بسپار</p>
                         </div>
                     </div>

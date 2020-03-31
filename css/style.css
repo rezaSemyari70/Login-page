@@ -18,17 +18,16 @@ body{
 }
 
 .rightSide{
-    width: 40%;
+    width: 45%;
     height: 100vh;
-    background-color: rgb(126, 20, 20);
+    background-color: rgb(255, 255, 255);
     display: flex;
-    padding-right: 100px;
-    
+    justify-content: center;
 }
 
 .contentRight{
-    width: 70%;
-    height: 70%;
+    width: 63%;
+    height: 80%;
     display: flex;
     justify-content: space-between ;
     flex-direction: column; 
@@ -36,8 +35,120 @@ body{
 }
 
 h2{
-    padding-top: 60px;
-    margin-bottom: 80px;
+    font-size: 15px ;
+    font-weight: bolder;
+    padding-top: 62px;
+    margin-bottom: 120px;
+    color: #0192ed;
+}
+
+h1{
+    font-size: 20px;
+    color: #424242 ;
+    /* margin-bottom: 13px; */
+}
+
+.titleInput{
+    font-size: 14px;
+    color: #9d9d9d;
+    padding-bottom: 37px;
+}
+
+.email, .pass, .securCode {
+    margin-bottom: 10px;
+    background-color: transparent;
+    border: none;
+}
+
+.emailInput , .passInput , .securInput{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    border-bottom: 0.2px solid lightgray;
+    align-items: center;
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+.emailInput{
+    border-bottom: 0.2px solid #0093f0;
+}
+
+.secur{
+    background-color: transparent;
+    border-bottom: 2px solid lightgray;
+}
+
+.securInput{
+    border-bottom: none;
+}
+
+.fas , .fa{
+    color: #bdbdbd;
+}
+
+.fa-user:before {
+    content: "\f007"; 
+    color: #0093ed;
+}
+
+.fa-user-lock:before {
+    content: "\f502"; 
+    
+}
+
+.fa-th:before {
+    content: "\f00a"; }
+
+.email{
+    font-size: 16px;
+}
+
+.email::placeholder{
+    color: #0093ed;
+}
+
+input::placeholder{
+    font-family: Shabnam;
+    /* opacity: 0.7; */
+    font-weight: bold;
+    /* display: flex;
+    align-items: flex-end; */
+   
+    color: #bdbdbd;
+}
+
+.code{
+    display: flex;
+    align-items: center;
+}
+
+.check{
+    color: gray;
+    font-size: 10px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+
+.checkBox{
+    width: 10px;
+    height: 10px;
+    background-color: rgb(92, 92, 92);
+    margin-left: 5px;
+}
+
+button {
+    width: 100%;
+    background-color: #0093ed;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    padding: 13px;
+    text-align: center;
+    font-size: 18px;
+    font-family: Shabnam;
+    color: white;
 }
 
 .check{
@@ -45,4 +156,5 @@ h2{
     flex-direction: row;
     align-items: center;
     justify-content: start;
+    color: #b4b4b4;
 }
