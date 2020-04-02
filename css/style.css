@@ -1,11 +1,20 @@
-@font-face {
+
+  @font-face {
     font-family: "Comfortaa";
-    font-family: "Shabnam";
-    src:url("../Fonts/Comfortaa-Regular.ttf") format("ttf"), /* chrome、firefox */
-        url("../Fonts/Shabnam.woff") format("woff"), /* chrome、firefox */
-        url("../fonts/Comfortaa-Bold.ttf") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/;
+    src: url('../fonts/Comfortaa-Regular.ttf') format('truetype');
+    font-style: normal;
     font-weight: bold;
+}
+
+@font-face {
+    font-family: "Shabnam";
+    src:url("../Fonts/Shabnam-Bold.ttf") format("ttf"), /* chrome、firefox */
+        url("../Fonts/Shabnam.woff") format("woff"), /* chrome、firefox */
+        url("../fonts/Shabnam-Light.ttf") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/;
+    font-weight: bold;
+    font-style: normal;
   }
+
 
 *{
     margin: 0;
@@ -17,12 +26,20 @@ body{
     font-family: "Shabnam";
 }
 
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
 .rightSide{
     width: 45%;
     height: 100vh;
     background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
+    
 }
 
 .contentRight{
@@ -158,3 +175,139 @@ button {
     justify-content: start;
     color: #b4b4b4;
 }
+
+.leftSide{
+    width: 55vw;
+    height: 100%;
+    background-image: linear-gradient(-135deg , #99f1db , #29bcef );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.spinRadar{
+    position: absolute;
+    bottom: 50vh;
+    left: 27.5vw;
+    opacity: 0.1;
+    transform: rotate(45deg);
+    transform-origin: bottom left;
+    overflow: hidden;
+    animation: radar 8s infinite linear;
+}
+
+.radarPart .palseWave{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    background-color: #b4f8f8;
+    border: .3px solid #b0f5f5;
+    border-radius: 50%;
+    animation: pulseWave 3s linear infinite;
+    opacity: 0;
+}
+
+.logo{
+    width: 300px;
+    height: 300px;
+}
+
+@keyframes radar {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.radarPart span:nth-child(1) {
+    animation-delay: 1s;
+}
+
+.radarPart span:nth-child(2) {
+    animation-delay: 0.75;
+}
+
+
+.radarPart span:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+
+.radarPart span:nth-child(4) {
+    animation-delay: 2.25s;
+}
+
+
+.radarPart span:nth-child(5) {
+    animation-delay: 3s;
+}
+
+
+.radarPart span:nth-child(6) {
+    animation-delay: 3.75s;
+}
+
+.radarPart span:nth-child(7) {
+    animation-delay: 4.5s;
+}
+
+@keyframes pulseWave {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    /* 25% {
+        transform: scale(0);
+        opacity: 0.1;
+    } */
+
+    50% {
+        transform: scale(1);
+        opacity: 0.1;
+    }
+
+    /* 75% {
+        transform: scale(1.5);
+        opacity: 0.1;
+    } */
+
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.leftSide .radarPart {
+    width: 30%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.leftSide .radarPart img {
+    width: 55%;
+    height: 100%;
+    background-color: transparent;
+    color: #ffffff;
+    z-index: 100;
+}
+
+h3{
+    position: absolute;
+    bottom: 17px;
+    font-family: "Comfortaa";
+    color: #f4ffff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
